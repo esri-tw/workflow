@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/workflow/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,21 +48,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/workflow/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+<link href="/workflow/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/workflow/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/workflow/images/favicon-32x32-next.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/workflow/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/workflow/images/logo.svg?v=5.1.4" color="#222">
 
 
 
@@ -83,37 +83,37 @@
 <meta name="keywords" content="座標轉換">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ArcMap 台灣常見座標轉換流程">
-<meta property="og:url" content="https://blog.idtcc.tk/2019/07/26/how-to-ArcMap-台灣常見座標轉換流程/index.html">
+<meta property="og:url" content="/2019/07/26/how-to-ArcMap-台灣常見座標轉換流程/index.html">
 <meta property="og:site_name" content="技術文件夾">
 <meta property="og:description" content="在ArcToolbox中有個 「Create Custom Geographic Transformation」 工具，可以提供使用者自訂座標系統轉換參數。台灣的使用者可以透過該工具自訂TWD67、TWD97、WGS84三種常見座標系統的轉換參數，設定好的轉換參數檔案(*.gtf)預設放在以下目錄，使用者可以自行複製到其他電腦使用。 C:\Users\&amp;lt;user&amp;gt;\AppData\Ro">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image2.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image3.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image4.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image2.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image5.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image6.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image7.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image8.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image9.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image10.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image11.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image12.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image13.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image14.png">
-<meta property="og:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image15.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image2.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image3.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image4.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image2.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image5.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image6.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image7.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image8.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image9.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image10.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image11.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image12.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image13.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image14.png">
+<meta property="og:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image15.png">
 <meta property="og:updated_time" content="2019-07-26T07:54:41.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ArcMap 台灣常見座標轉換流程">
 <meta name="twitter:description" content="在ArcToolbox中有個 「Create Custom Geographic Transformation」 工具，可以提供使用者自訂座標系統轉換參數。台灣的使用者可以透過該工具自訂TWD67、TWD97、WGS84三種常見座標系統的轉換參數，設定好的轉換參數檔案(*.gtf)預設放在以下目錄，使用者可以自行複製到其他電腦使用。 C:\Users\&amp;lt;user&amp;gt;\AppData\Ro">
-<meta name="twitter:image" content="https://blog.idtcc.tk/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image2.png">
+<meta name="twitter:image" content="/media/how-to/ArcMap/%E5%8F%B0%E7%81%A3%E5%B8%B8%E8%A6%8B%E5%BA%A7%E6%A8%99%E8%BD%89%E6%8F%9B%E6%B5%81%E7%A8%8B/image2.png">
 
 
 
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '/workflow/',
     scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
@@ -136,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="https://blog.idtcc.tk/2019/07/26/how-to-ArcMap-台灣常見座標轉換流程/">
+  <link rel="canonical" href="/2019/07/26/how-to-ArcMap-台灣常見座標轉換流程/">
 
 
 
@@ -170,7 +170,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/workflow/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">技術文件夾</span>
         <span class="logo-line-after"><i></i></span>
@@ -198,7 +198,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/workflow/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
@@ -208,7 +208,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/workflow/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
@@ -218,7 +218,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/workflow/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
@@ -228,7 +228,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/workflow/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
@@ -238,7 +238,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/workflow/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
@@ -311,12 +311,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.idtcc.tk/2019/07/26/how-to-ArcMap-台灣常見座標轉換流程/">
+    <link itemprop="mainEntityOfPage" href="/workflow/2019/07/26/how-to-ArcMap-台灣常見座標轉換流程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="GIS Division">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/workflow/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -363,7 +363,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/How-to/" itemprop="url" rel="index">
+                  <a href="/workflow/categories/How-to/" itemprop="url" rel="index">
                     <span itemprop="name">How-to</span>
                   </a>
                 </span>
@@ -374,7 +374,7 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/How-to/ArcMap/" itemprop="url" rel="index">
+                  <a href="/workflow/categories/How-to/ArcMap/" itemprop="url" rel="index">
                     <span itemprop="name">ArcMap</span>
                   </a>
                 </span>
@@ -589,7 +589,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/座標轉換/" rel="tag"># 座標轉換</a>
+            <a href="/workflow/tags/座標轉換/" rel="tag"># 座標轉換</a>
           
         </div>
       
@@ -669,7 +669,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/workflow/archives/">
               
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">文章</span>
@@ -823,57 +823,57 @@
 
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/workflow/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/workflow/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="/workflow/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/workflow/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/workflow/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/workflow/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/workflow/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/workflow/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/workflow/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/workflow/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/workflow/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -923,7 +923,7 @@
     } else if (/json$/i.test(search_path)) {
       isXml = false;
     }
-    var path = "/" + search_path;
+    var path = "/workflow/" + search_path;
     // monitor main search box;
 
     var onPopupClose = function (e) {
