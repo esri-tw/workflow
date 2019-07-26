@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="地理資料庫,">
 
 
 
@@ -79,18 +79,22 @@
 
 
 
-<meta name="description" content="一份持續更新的技術文件，改善合作與協調的效率">
-<meta name="keywords" content="ArcGIS, tech-support">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://workflow.idtcc.tk/tags/index.html">
+<meta name="description" content="本文將介紹如何使用PostgreSQL，在本機電腦上建置一個可以隨時帶著走的地理資料庫，方便程式開發階段或是教學階段時使用。">
+<meta name="keywords" content="地理資料庫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用免安裝版的PostgresSQL建立空間資料庫">
+<meta property="og:url" content="http://workflow.idtcc.tk/2019/07/26/how-to-PostgreSQL-使用免安裝版的PostgresSQL建立空間資料庫/index.html">
 <meta property="og:site_name" content="技術文件夾">
-<meta property="og:description" content="一份持續更新的技術文件，改善合作與協調的效率">
+<meta property="og:description" content="本文將介紹如何使用PostgreSQL，在本機電腦上建置一個可以隨時帶著走的地理資料庫，方便程式開發階段或是教學階段時使用。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-07-26T08:50:58.579Z">
+<meta property="og:image" content="http://i.imgur.com/uQFnqql.png">
+<meta property="og:image" content="http://i.imgur.com/dftMFrM.jpg">
+<meta property="og:image" content="https://i.imgur.com/iaqPryV.png">
+<meta property="og:updated_time" content="2019-07-26T09:11:00.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="一份持續更新的技術文件，改善合作與協調的效率">
+<meta name="twitter:title" content="使用免安裝版的PostgresSQL建立空間資料庫">
+<meta name="twitter:description" content="本文將介紹如何使用PostgreSQL，在本機電腦上建置一個可以隨時帶著走的地理資料庫，方便程式開發階段或是教學階段時使用。">
+<meta name="twitter:image" content="http://i.imgur.com/uQFnqql.png">
 
 
 
@@ -120,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://workflow.idtcc.tk/tags/">
+  <link rel="canonical" href="http://workflow.idtcc.tk/2019/07/26/how-to-PostgreSQL-使用免安裝版的PostgresSQL建立空間資料庫/">
 
 
 
 
 
-  <title>tags | 技術文件夾</title>
+  <title>使用免安裝版的PostgresSQL建立空間資料庫 | 技術文件夾</title>
   
 
 
@@ -283,40 +287,206 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://workflow.idtcc.tk/2019/07/26/how-to-PostgreSQL-使用免安裝版的PostgresSQL建立空間資料庫/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GIS Division">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="技術文件夾">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共計 2 個標籤
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/地理資料庫/" style="font-size: 12px; color: #ccc">地理資料庫</a> <a href="/tags/座標轉換/" style="font-size: 12px; color: #ccc">座標轉換</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">使用免安裝版的PostgresSQL建立空間資料庫</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-07-26T14:11:35+08:00">
+                2019-07-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/How-to/" itemprop="url" rel="index">
+                    <span itemprop="name">How-to</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/How-to/PostgreSQL/" itemprop="url" rel="index">
+                    <span itemprop="name">PostgreSQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>本文將介紹如何使用<code>PostgreSQL</code>，在本機電腦上建置一個可以隨時帶著走的地理資料庫，方便程式開發階段或是教學階段時使用。</p>
+<a id="more"></a>
+
+<h2 id="檢查ArcGIS支援哪一個版本的PostgreSQL"><a href="#檢查ArcGIS支援哪一個版本的PostgreSQL" class="headerlink" title="檢查ArcGIS支援哪一個版本的PostgreSQL"></a>檢查ArcGIS支援哪一個版本的PostgreSQL</h2><ol>
+<li><p>先到<a href="http://desktop.arcgis.com/en/system-requirements/latest/database-requirements-postgresql.htm" target="_blank" rel="noopener">Help頁面</a>選擇你要使用的ArcGIS版本</p>
+<p><img src="http://i.imgur.com/uQFnqql.png" alt="選擇你要使用的ArcGIS版本"></p>
+<p><img src="http://i.imgur.com/dftMFrM.jpg" alt="Imgur"></p>
+</li>
+<li><p>查詢有支援的最小版本</p>
+<p><img src="https://i.imgur.com/iaqPryV.png" alt="查詢支援度"></p>
+</li>
+</ol>
+<hr>
+<h2 id="下載PostgresSQL"><a href="#下載PostgresSQL" class="headerlink" title="下載PostgresSQL"></a>下載PostgresSQL</h2><ol>
+<li><p><a href="https://www.postgresql.org/download/windows/" target="_blank" rel="noopener">連到PostgreSQL官方網站</a></p>
+</li>
+<li><p>點選<a href="https://www.enterprisedb.com/download-postgresql-binaries" target="_blank" rel="noopener">zip archive</a></p>
+</li>
+<li><p>選擇適合的版本下載  </p>
+</li>
+</ol>
+<h2 id="讓PostgreSQL具有儲存空間資料的能力"><a href="#讓PostgreSQL具有儲存空間資料的能力" class="headerlink" title="讓PostgreSQL具有儲存空間資料的能力"></a>讓PostgreSQL具有儲存空間資料的能力</h2><ol>
+<li><p>在ArcMap預設安裝資料夾下，找到DatabaseSupport資料夾，預設安裝路徑為<code>C:\Program Files (x86)\ArcGIS\Desktop版本號碼\DatabaseSupport</code></p>
+</li>
+<li><p>找到PostgreSQL資料夾，然後依據你下載的版本，進入該版本的資要夾，然後再進入Windows64資料夾</p>
+</li>
+<li><p>複製資料夾中的<code>st_geometry.dll</code>以及<code>libst_raster_pg.dll</code>，到 <strong>PostgresSQL資料夾/lib</strong> 中</p>
+</li>
+</ol>
+<h2 id="初始化你的PostgreSQL"><a href="#初始化你的PostgreSQL" class="headerlink" title="初始化你的PostgreSQL"></a>初始化你的PostgreSQL</h2><p>將以下程式碼複製到文字檔中，然後副檔案改成.bat儲存。然後執行這個批次檔。</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">ECHO</span> ON</span><br><span class="line"><span class="comment">REM The script sets environment variables helpful for PostgreSQL</span></span><br><span class="line">@<span class="built_in">SET</span> <span class="built_in">PATH</span>="<span class="variable">%~dp0\bin";%</span><span class="built_in">PATH</span>%</span><br><span class="line">@<span class="built_in">SET</span> PGDATA=%~dp0\data</span><br><span class="line">@<span class="built_in">SET</span> PGDATABASE=postgres</span><br><span class="line">@<span class="built_in">SET</span> PGUSER=postgres</span><br><span class="line">@<span class="built_in">SET</span> PGPORT=<span class="number">5432</span></span><br><span class="line">@<span class="built_in">SET</span> PGLOCALEDIR=%~dp0\share\locale</span><br><span class="line"></span><br><span class="line"><span class="comment">REM remark at first run</span></span><br><span class="line"><span class="comment">rem "%~dp0\bin\initdb" -U postgres -A trust</span></span><br><span class="line"></span><br><span class="line">"%~dp0\bin\pg_ctl" -D "%~dp0/data" -l logfile <span class="built_in">start</span></span><br><span class="line"><span class="built_in">ECHO</span> "Click enter to stop"</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line">"%~dp0\bin\pg_ctl" -D "%~dp0/data" stop</span><br></pre></td></tr></table></figure>
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/地理資料庫/" rel="tag"># 地理資料庫</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/26/how-to-ArcMap-台灣常見座標轉換流程/" rel="prev" title="ArcMap 台灣常見座標轉換流程">
+                ArcMap 台灣常見座標轉換流程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -349,8 +519,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -410,6 +589,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#檢查ArcGIS支援哪一個版本的PostgreSQL"><span class="nav-number">1.</span> <span class="nav-text">檢查ArcGIS支援哪一個版本的PostgreSQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下載PostgresSQL"><span class="nav-number">2.</span> <span class="nav-text">下載PostgresSQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#讓PostgreSQL具有儲存空間資料的能力"><span class="nav-number">3.</span> <span class="nav-text">讓PostgreSQL具有儲存空間資料的能力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化你的PostgreSQL"><span class="nav-number">4.</span> <span class="nav-text">初始化你的PostgreSQL</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

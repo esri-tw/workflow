@@ -29,6 +29,33 @@
     </entry>
     
     
+    
+    <entry>
+      <title>使用免安裝版的PostgresSQL建立空間資料庫</title>
+      <link href="/2019/07/26/how-to-PostgreSQL-%E4%BD%BF%E7%94%A8%E5%85%8D%E5%AE%89%E8%A3%9D%E7%89%88%E7%9A%84PostgresSQL%E5%BB%BA%E7%AB%8B%E7%A9%BA%E9%96%93%E8%B3%87%E6%96%99%E5%BA%AB/"/>
+      <url>/2019/07/26/how-to-PostgreSQL-%E4%BD%BF%E7%94%A8%E5%85%8D%E5%AE%89%E8%A3%9D%E7%89%88%E7%9A%84PostgresSQL%E5%BB%BA%E7%AB%8B%E7%A9%BA%E9%96%93%E8%B3%87%E6%96%99%E5%BA%AB/</url>
+      
+        <content type="html"><![CDATA[<p>本文將介紹如何使用<code>PostgreSQL</code>，在本機電腦上建置一個可以隨時帶著走的地理資料庫，方便程式開發階段或是教學階段時使用。</p><a id="more"></a><h2 id="檢查ArcGIS支援哪一個版本的PostgreSQL"><a href="#檢查ArcGIS支援哪一個版本的PostgreSQL" class="headerlink" title="檢查ArcGIS支援哪一個版本的PostgreSQL"></a>檢查ArcGIS支援哪一個版本的PostgreSQL</h2><ol><li><p>先到<a href="http://desktop.arcgis.com/en/system-requirements/latest/database-requirements-postgresql.htm" target="_blank" rel="noopener">Help頁面</a>選擇你要使用的ArcGIS版本</p><p><img src="http://i.imgur.com/uQFnqql.png" alt="選擇你要使用的ArcGIS版本"></p><p><img src="http://i.imgur.com/dftMFrM.jpg" alt="Imgur"></p></li><li><p>查詢有支援的最小版本</p><p><img src="https://i.imgur.com/iaqPryV.png" alt="查詢支援度"></p></li></ol><hr><h2 id="下載PostgresSQL"><a href="#下載PostgresSQL" class="headerlink" title="下載PostgresSQL"></a>下載PostgresSQL</h2><ol><li><p><a href="https://www.postgresql.org/download/windows/" target="_blank" rel="noopener">連到PostgreSQL官方網站</a></p></li><li><p>點選<a href="https://www.enterprisedb.com/download-postgresql-binaries" target="_blank" rel="noopener">zip archive</a></p></li><li><p>選擇適合的版本下載  </p></li></ol><h2 id="讓PostgreSQL具有儲存空間資料的能力"><a href="#讓PostgreSQL具有儲存空間資料的能力" class="headerlink" title="讓PostgreSQL具有儲存空間資料的能力"></a>讓PostgreSQL具有儲存空間資料的能力</h2><ol><li><p>在ArcMap預設安裝資料夾下，找到DatabaseSupport資料夾，預設安裝路徑為<code>C:\Program Files (x86)\ArcGIS\Desktop版本號碼\DatabaseSupport</code></p></li><li><p>找到PostgreSQL資料夾，然後依據你下載的版本，進入該版本的資要夾，然後再進入Windows64資料夾</p></li><li><p>複製資料夾中的<code>st_geometry.dll</code>以及<code>libst_raster_pg.dll</code>，到 <strong>PostgresSQL資料夾/lib</strong> 中</p></li></ol><h2 id="初始化你的PostgreSQL"><a href="#初始化你的PostgreSQL" class="headerlink" title="初始化你的PostgreSQL"></a>初始化你的PostgreSQL</h2><p>將以下程式碼複製到文字檔中，然後副檔案改成.bat儲存。然後執行這個批次檔。</p><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">ECHO</span> ON</span><br><span class="line"><span class="comment">REM The script sets environment variables helpful for PostgreSQL</span></span><br><span class="line">@<span class="built_in">SET</span> <span class="built_in">PATH</span>="<span class="variable">%~dp0\bin";%</span><span class="built_in">PATH</span>%</span><br><span class="line">@<span class="built_in">SET</span> PGDATA=%~dp0\data</span><br><span class="line">@<span class="built_in">SET</span> PGDATABASE=postgres</span><br><span class="line">@<span class="built_in">SET</span> PGUSER=postgres</span><br><span class="line">@<span class="built_in">SET</span> PGPORT=<span class="number">5432</span></span><br><span class="line">@<span class="built_in">SET</span> PGLOCALEDIR=%~dp0\share\locale</span><br><span class="line"></span><br><span class="line"><span class="comment">REM remark at first run</span></span><br><span class="line"><span class="comment">rem "%~dp0\bin\initdb" -U postgres -A trust</span></span><br><span class="line"></span><br><span class="line">"%~dp0\bin\pg_ctl" -D "%~dp0/data" -l logfile <span class="built_in">start</span></span><br><span class="line"><span class="built_in">ECHO</span> "Click enter to stop"</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line">"%~dp0\bin\pg_ctl" -D "%~dp0/data" stop</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> How-to </category>
+          
+          <category> PostgreSQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 地理資料庫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
